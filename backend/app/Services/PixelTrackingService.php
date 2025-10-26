@@ -16,11 +16,12 @@ class PixelTrackingService
      */
     public function trackEvent(array $data)
     {
+        return $data;
         // Validate pixel exists and is active
         $pixel = Pixel::where('pixel_id', $data['pixel_id'])
             ->where('is_active', true)
             ->first();
-
+ 
         if (!$pixel) {
             return false;
         }
