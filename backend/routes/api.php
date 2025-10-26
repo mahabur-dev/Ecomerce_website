@@ -8,7 +8,7 @@ use App\Models\Order;
 use Modules\SSLEcommerz\Http\Controllers\SslCommerzPaymentController;
 use Illuminate\Http\Request;
 use Illuminate\Broadcasting\BroadcastController; 
-use App\Http\Controllers\Api\PixelTrackingController;
+use App\Http\Controllers\PixelTrackingController;
 
 Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);

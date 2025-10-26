@@ -1,8 +1,7 @@
 <?php
 
-namespace App\Http\Controllers\Api;
+namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
 use App\Services\PixelTrackingService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
@@ -61,7 +60,8 @@ class PixelTrackingController extends Controller
             return response()->json([
                 'success' => true,
                 'message' => 'Event accepted for processing.',
-                'event_id' => $event->id ?? null
+                'event_id' => $event->id ?? null,
+                'data' => $event
             ], 202);
         } catch (\Exception $e) {
             // Log severe errors for server review

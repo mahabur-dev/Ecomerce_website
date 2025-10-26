@@ -1,10 +1,4 @@
-// ============================================
-// STEP 2: Models
-// ============================================
-
-// File: app/Models/Pixel.php
 <?php
-
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
